@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+nav .button i{
+    display: none;
+}
+nav{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    padding: 20px 100px;
+    background-color: rgb(76,72,72);
+    color: white;
+}
+nav input{
+    display: none;
+}
+nav h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    position: relative;
+}
+nav ul li{
+    list-style: none;
+    font-size: 16px;
+    margin: 0px 10px;
+    font-weight: 400;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    transition: all 0.4s ease;
+}
+nav a:hover{
+    background-color: white;
+    padding: 8px;
+    border-radius: 15px;
+    color: black;
+}
+@media (max-width:768px){
+    nav ul::before{
+        content: "Brand";
+        margin: 40px;
+        font-size: 25px;
+        font-weight: 600;
+        position: relative;
+        left: 80px;
+        font-size: 3rem;
+        color: white;
+    }
+    nav ul{
+        position: fixed;
+        left: -100%;
+        top: 0px;
+        width: 60%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        display: block;
+        text-align: left;
+        background-color: rgb(86,88,88);
+        transition: all 0.2s ease;
+        padding-top: 80px;
+    }
+    #click:checked ~ .button i:before{
+        content:"\f00d"
+    }
+    nav ul li{
+        margin: 40px;
+        font-size: 2rem;
+    }
+    nav .button i{
+        display: block;
+        font-size: 20px;
+    }
+    #click:checked ~ ul{
+        left: 0;
+    }
+    nav{
+        justify-content: space-between;
+    }
+}
